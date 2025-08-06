@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweetness overloaded Bakery</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Style for the sticky navigation bar */
+        .sticky-nav {
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+            .uniform-img {
+        width: 100%;
+        height: 250px; /* Adjust height as needed */
+        object-fit: cover;
+        border-radius: 0.75rem; /* matches Tailwind's rounded-xl */
+        }
+    </style>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("qjd1T4AevFBjtcGgG"); // Get this from EmailJS dashboard
+        })();
+    </script>
+
+</head>
+<body class="bg-stone-50 text-stone-800">
+
+    <!-- Header and Navigation Bar -->
+    <header class="sticky top-0 z-50 shadow-md sticky-nav">
+        <nav class="container mx-auto px-4 py-4 flex flex-wrap justify-between items-center">
+            <a href="#home" class="text-3xl font-bold text-amber-800 tracking-tight">Sweetness overladed</a>
+            <div class="hidden md:flex space-x-6 text-lg font-medium">
+                <a href="#home" class="hover:text-amber-600 transition-colors">Home</a>
+                <a href="#about" class="hover:text-amber-600 transition-colors">About Us</a>
+                <a href="#menu" class="hover:text-amber-600 transition-colors">Menu</a>
+                <a href="#specialty" class="hover:text-amber-600 transition-colors">Specialty Cakes</a>
+                <a href="#gallery" class="hover:text-amber-600 transition-colors">Gallery</a>
+                <a href="#testimonials" class="hover:text-amber-600 transition-colors">customer love</a>
+                <a href="#contact" class="hover:text-amber-600 transition-colors">Contact</a>
+                <a href="#order" class="hover:text-amber-600 transition-colors">Order Now</a>
+            </div>
+            <!-- Mobile Menu Button - for a more advanced app, you'd add JS here to toggle visibility -->
+            <div class="md:hidden">
+                <button class="text-stone-800 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="relative h-screen bg-cover bg-center flex items-center justify-center text-center p-4"
+            style="background-image: url('bakeryimage1.jpg');">
+            <div class="bg-black/40 absolute inset-0"></div>
+            <div class="relative text-white max-w-2xl">
+                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight drop-shadow-lg">
+                    Welcome to Sweetness overloaded bakery
+                </h1>
+                <p class="mt-4 text-xl md:text-2xl font-light drop-shadow-md">
+                    freshly baked happiness
+                </p>
+                <a href="#menu" class="mt-8 inline-block px-8 py-3 bg-amber-600 text-white text-lg font-bold rounded-full shadow-lg hover:bg-amber-700 transition-transform transform hover:scale-105">
+                    Explore Our Menu
+                </a>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-20 px-4">
+            <div class="container mx-auto max-w-4xl grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-center md:text-left">
+                    <h2 class="text-4xl font-bold text-amber-800 mb-4">Our Story</h2>
+                    <p class="text-lg text-stone-700 leading-relaxed">
+                        Sweetness overloaded bakery is not just a bakery it's a heart full of love.
+                        with the savings, support from family, and heart full of hope, I opened a tiny
+                        bakery on a quite street.I named it " sweetness overloaded bakery"- because every
+                         treat carried a Story,a memory. and a bit of their heart
+                         now,every time someone walks in, they don't just buy pasteries
+                         they take home a piece of love.
+
+                    </p>
+                </div>
+                <div class="order-first md:order-last">
+                    <img src="interior.jpg" alt="Bakery interior" class="w-full h-auto rounded-xl shadow-lg">
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu" class="py-20 bg-amber-50 px-4">
+            <div class="container mx-auto">
+                <h2 class="text-4xl font-bold text-center text-amber-800 mb-12">Our Delicious Menu</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Menu Item Card -->
+                    <div class="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300">
+                        <img src="bread.jpg" alt="Artisan Bread" class="w-full h-auto rounded-xl mb-4">
+                        <h3 class="text-2xl font-semibold text-amber-800">Artisan Breads</h3>
+                        <p class="mt-2 text-stone-600">From our hands to your table — slow-fermented, stone-baked artisan loaves.</p>
+                    </div>
+                    <!-- Menu Item Card -->
+                    <div class="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300">
+                        <img src="pasteries.jpg" alt="Pastries" class="w-full h-auto rounded-xl mb-4">
+                        <h3 class="text-2xl font-semibold text-amber-800">Pastries</h3>
+                        <p class="mt-2 text-stone-600">Little bites of joy,made with love and butter.</p>
+                    </div>
+                    <!-- Menu Item Card -->
+                    <div class="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300">
+                        <img src="cakes.jpg" alt="Cakes" class="w-full h-auto rounded-xl mb-4">
+                        <h3 class="text-2xl font-semibold text-amber-800">Cakes</h3>
+                        <p class="mt-2 text-stone-600">baked with love, frosted with dreams.</p>
+                    </div>
+                    <!-- Add more menu items here as needed -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Specialty Cakes Section -->
+        <section id="specialty" class="py-20 px-4">
+            <div class="container mx-auto text-center">
+                <h2 class="text-4xl font-bold text-amber-800 mb-6">Our Specialty Cakes</h2>
+                <p class="text-lg text-stone-700 max-w-3xl mx-auto mb-12">
+                    Celebrate your special moments with a custom-designed cake. From weddings to birthdays, our
+                    bakers work with you to create a delicious and beautiful masterpiece that's perfect for your
+                    occasion.
+                </p>
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <img src="wedding cake.jpg" alt="Wedding Cake" class="uniform-img shadow-lg">
+                    <div class="text-left">
+                        <h3 class="text-3xl font-semibold text-amber-800 mb-4">Dream Cakes for Every Occasion</h3>
+                        <ul class="list-disc list-inside space-y-2 text-lg text-stone-700">
+                            <li>Personalized flavors and fillings</li>
+                            <li>Unique designs and decorations</li>
+                            <li>Consultation with our expert cake artists</li>
+                            <li>Delivered fresh to your event</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="py-20 bg-amber-50 px-4">
+            <div class="container mx-auto text-center">
+                <h2 class="text-4xl font-bold text-amber-800 mb-12">Photo Gallery</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <img src="cake2.jpg" alt="Gallery Image 1" class="w-full h-full object-cover rounded-xl shadow-md transform hover:scale-105 transition-transform duration-300">
+                    <img src="bread2.jpg" alt="Gallery Image 2" class="w-full h-full object-cover rounded-xl shadow-md transform hover:scale-105 transition-transform duration-300">
+                    <img src="pastry2.jpg" alt="Gallery Image 3" class="w-full h-full object-cover rounded-xl shadow-md transform hover:scale-105 transition-transform duration-300">
+                    <img src="croisaant.jpg" alt="Gallery Image 4" class="w-full h-full object-cover rounded-xl shadow-md transform hover:scale-105 transition-transform duration-300">
+                    <img src="cookies.jpg" alt="Gallery Image 5" class="w-full h-full object-cover rounded-xl shadow-md transform hover:scale-105 transition-transform duration-300">
+                    <img src="Donuts.jpg" alt="Gallery Image 6" class="w-full h-full object-cover rounded-xl shadow-md transform hover:scale-105 transition-transform duration-300">
+                    <img src="Cupcakes.jpg" alt="Gallery Image 7" class="w-full h-full object-cover rounded-xl shadow-md transform hover:scale-105 transition-transform duration-300">
+                    <img src="pie.jpg" alt="Gallery Image 8" class="w-full h-full object-cover rounded-xl shadow-md transform hover:scale-105 transition-transform duration-300">
+                </div>
+            </div>
+        </section>
+
+        <!-- customer love -->
+        <section id="customer love" class="py-20 px-4">
+            <div class="container mx-auto max-w-3xl text-center">
+                <h2 class="text-4xl font-bold text-amber-800 mb-12">customer loves</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- customer love 1 -->
+                    <div class="bg-white rounded-2xl p-6 shadow-lg">
+                        <p class="text-lg italic text-stone-700">
+                            "The best croissants I've ever had! The staff is so friendly and the aroma of fresh bread
+                            is intoxicating. A truly delightful experience every time."
+                        </p>
+                        <p class="mt-4 font-semibold text-stone-800">- amrita</p>
+                    </div>
+                    <!-- customer love 2 -->
+                    <div class="bg-white rounded-2xl p-6 shadow-lg">
+                        <p class="text-lg italic text-stone-700">
+                            "We ordered a custom cake for our wedding, and it was absolutely stunning and delicious.
+                            Sweetness overloaded exceeded all our expectations!"
+                        </p>
+                        <p class="mt-4 font-semibold text-stone-800">- shreya</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-amber-50 px-4">
+            <div class="container mx-auto max-w-4xl grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-center md:text-left">
+                    <h2 class="text-4xl font-bold text-amber-800 mb-6">Contact Us</h2>
+                    <p class="text-lg text-stone-700 mb-4">
+                        We would love to hear from you! Visit us at our location or get in touch.
+                    </p>
+                    <div class="space-y-4 text-stone-700">
+                        <p><strong>Address:</strong> srmcem lucknow,226028</p>
+                        <p><strong>Phone:</strong> 9236997122</p>
+                        <p><strong>Email:</strong> aanyagoel6393@gmail.com</p>
+                        <p><strong>Hours:</strong> Mon-sun, 11:00 AM - 12:00 PM</p>
+                    </div>
+                </div>
+                <div>
+                    <!-- Contact Form -->
+                    <form id="contact-form" class="bg-white rounded-2xl p-8 shadow-xl">
+                        <div class="mb-4">
+                            <label for="name" class="block font-semibold mb-2">Name</label>
+                            <input type="text" id="name" name="name" required class="w-full p-3 rounded-lg border" />
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block font-semibold mb-2">Email</label>
+                            <input type="email" id="email" name="email" required class="w-full p-3 rounded-lg border" />
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block font-semibold mb-2">Message</label>
+                            <textarea id="message" name="message" rows="4" required class="w-full p-3 rounded-lg border"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-amber-600 text-white font-bold py-3 rounded-lg">
+                            Send Message
+                        </button>
+                    </form>
+
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Order Now Section -->
+        <section id="order" class="py-20 px-4">
+            <div class="container mx-auto text-center max-w-2xl">
+                <h2 class="text-4xl font-bold text-amber-800 mb-6">Place Your Order</h2>
+                <p class="text-lg text-stone-700 mb-8">
+                    Ready to indulge? Use the form below to place a custom order or inquire about our products.
+                    Our team will get back to you as soon as possible.
+                </p>
+                <!-- Order Form -->
+                <form class="bg-amber-50 rounded-2xl p-8 shadow-xl">
+                    <div class="mb-4">
+                        <label for="order-type" class="block text-stone-800 font-semibold mb-2">Order Type</label>
+                        <select id="order-type" class="w-full p-3 rounded-lg border border-stone-300 focus:ring-2 focus:ring-amber-500 focus:border-transparent">
+                            <option value="">Select a Product</option>
+                            <option value="cake">Custom Cake</option>
+                            <option value="pastries">Large Pastry Order</option>
+                            <option value="bread">Bread Subscription</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label for="details" class="block text-stone-800 font-semibold mb-2">Details</label>
+                        <textarea id="details" rows="5" class="w-full p-3 rounded-lg border border-stone-300 focus:ring-2 focus:ring-amber-500 focus:border-transparent" placeholder="Tell us about your order..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-amber-600 text-white font-bold py-3 rounded-lg shadow-lg hover:bg-amber-700 transition-colors">
+                        Submit Order Inquiry
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-amber-800 text-white py-8 px-4 text-center">
+        <p>&copy; 2023 Sweetness overloaded Bakery. All rights reserved.</p>
+    </footer>
+    <script>
+        document.getElementById("contact-form").addEventListener("submit", function(e) {
+            e.preventDefault(); // prevent default form action
+
+            emailjs.sendForm("service_298wupd", "template_cvnbs1l", this)
+            .then(() => {
+                alert("Message sent successfully!");
+            }, (error) => {
+                console.error("EmailJS error:", error); // log actual error in browser console
+                alert("Failed to send message: " + error.text);
+            });
+        });
+    </script>
+
+</body>
+</html>
+https://github.com/aanyagoel63/bakeryshop.git
